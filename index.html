@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="./app.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <h1>Memory Game</h1>
+  <button id="start">Start 🎮</button>
+  <select id="difficulty">
+    <option value="3">Esay (4x4)</option>
+    <option value="6">Regular (6x6)</option>
+    <option value="8">Hard (8x8)</option>
+  </select>
+  <select id="theme">
+    <option value="fruits">Fruits</option>
+    <option value="animals">Animals</option>
+    <option value="shapes">Geometric Forms</option>
+    <option value="weather">Weather icons</option>
+    <option value="food">Foods</option>
+    <option value="vehicules">Cars</option>
+    <option value="plants">Plants</option>
+  </select>
+  <div id="score">Coups : 0</div>
+  <div id="countdown">remaining time : 0s</div>
+  <div id="highScore">: -</div>
+  <div id="board" aria-live="polite" role="grid"></div>
+  <button id="reset">Restart 🔄</button>
+  <audio id="flipSound" src="./Audios/flip.mp3" preload="auto"></audio>
+  <audio id="matchSound" src="./Audios/match.mp3" preload="auto"></audio>
+  <audio id="winSound" src="./Audios/winning.mp3" preload="auto"></audio>
+  <audio id="wrongSound" src="./Audios/wrong.mp3" preload="auto"></audio>
+  <audio id="loseSound" src="./Audios/lose.mp3" preload="auto"></audio>
+  <div id="popup">
+    <p id="popupMessage"></p>
+    <button id="popupButton">OK ✅</button>
+  </div>
+</body>
+</html>
